@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,182 +9,107 @@
   </head>
 
   <body>
-    <header class="page-header text-white-bold">
-      <div class="header-left">
-        <img
-          class="logo-img"
-          src="../src/assets/logo-img.png"
-          width="40px"
-          height="40px"
-          alt="Bilge Adam Logo"
-        />
-        <div style="margin-top: 10px">
-          <h2 class="remove-builtin" style="font-size: accordion">BilgeAdam</h2>
-          <span
-            class="remove-builtin"
-            style="float: right; font-size: 12px; font-weight: 500"
-            >Bilişim Grubu</span
-          >
+    <div class="page-all">
+      <header class="page-header text-white-bold">
+        <div class="header-left">
+          <img
+            class="logo-img"
+            src="../src/assets/logo-img.png"
+            width="40px"
+            height="40px"
+            alt="Bilge Adam Logo"
+          />
+          <div style="margin-top: 10px">
+            <h2 class="remove-builtin" style="font-size: accordion">BilgeAdam</h2>
+            <span
+              class="remove-builtin"
+              style="float: right; font-size: 12px; font-weight: 500"
+              >Bilişim Grubu</span
+            >
+          </div>
         </div>
-      </div>
-      <div class="header-rigt">
-        <span id="catalog">Hizmet Kataloğu</span>
-        <div class="user-info">
-          <div class="sign-of-user">MÖ</div>
-          <span id="username">Muhammed Talha Özdemir</span>
+        <div class="header-rigt">
+          <span id="catalog">Hizmet Kataloğu</span>
+          <div class="user-info">
+            <div class="sign-of-user">MÖ</div>
+            <span id="username">Muhammed Talha Özdemir</span>
+          </div>
         </div>
-      </div>
-    </header>
-    <div class="content">
-      <div class="backgorund-img">
-        <div class="blur">
-          <div class="search-area">
-            <div>
-              <h1 class="search-title">Size Nasıl Yardımcı Olabiliriz?</h1>
-              <input
-                id="city-search"
-                list="cities"
-                type="text"
-                placeholder='Lütfen Bir Şehir İsmi Giriniz. Örneğin: "Kastamonu"'
-                autocomplete="cities"
-              />
+      </header>
+      <div class="content">
+        <div class="backgorund-img">
+          <div class="blur">
+            <div class="search-area">
+              <div>
+                <h1 class="search-title">Size Nasıl Yardımcı Olabiliriz?</h1>
+                <input  
+                  oninput="searchInput(this.value)"
+                  id="city-search"
+                  list="cities"
+                  type="text"
+                  placeholder='Lütfen Bir Şehir İsmi Giriniz. Örneğin: "Kastamonu"'
+                  autocomplete="cities"
+                />
+                <select name="city" id="cities" value="" onchange="selectedCity()" onfocus="selectedCity()" ></select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content text-white">
+          <div class="tab-content-buttons" style="background-color: #32b8de">
+            <img
+              src="../src/assets/request.png"
+              alt="İstek Bildir"
+            /><span>İstek Bildir</span>
+          </div>
+          <div class="tab-content-buttons" style="background-color: #90cb25">
+            <img src="../src/assets/warnning.png" alt="Sorun Bildir" /><span
+              >Sorun Bildir</span
+            >
+          </div>
+          <div class="tab-content-buttons" style="background-color: #fe6672">
+            <img src="../src/assets/allRecord.png" alt="Tüm Kayıtlar" /><span
+              >Tüm Kayıtlar</span
+            >
+          </div>
+        </div>
+        <div class="announcement-container" >
+          <div class="announcement">
+            <h3 class="text-white-bold">Duyurular</h3>
+            <div class="announcements">
+              <div class="list-announcement">
+                <h3>Duyuru 1</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatum corrupti optio voluptas expedita cum, nihil tenetur,
+                  labore nam accusamus vitae non distinctio. Officia molestias ut
+                  minima, earum aperiam cum excepturi?
+                </p>
+              </div>
+              <div class="list-announcement">
+                <h3>Duyuru 2</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatum corrupti optio voluptas expedita cum, nihil tenetur,
+                  labore nam accusamus vitae non distinctio. Officia molestias ut
+                  minima, earum aperiam cum excepturi?
+                </p>
+              </div>
+              <div class="list-announcement">
+                <h3>Duyuru 3</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatum corrupti optio voluptas expedita cum, nihil tenetur,
+                  labore nam accusamus vitae non distinctio. Officia molestias ut
+                  minima, earum aperiam cum excepturi?
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="tab-content text-white">
-        <div class="tab-content-buttons" style="background-color: #32b8de">
-          <img
-            src="../src/assets/request.png"
-            alt="İstek Bildir"
-          /><span>İstek Bildir</span>
-        </div>
-        <div class="tab-content-buttons" style="background-color: #90cb25">
-          <img src="../src/assets/warnning.png" alt="Sorun Bildir" /><span
-            >Sorun Bildir</span
-          >
-        </div>
-        <div class="tab-content-buttons" style="background-color: #fe6672">
-          <img src="../src/assets/allRecord.png" alt="Tüm Kayıtlar" /><span
-            >Tüm Kayıtlar</span
-          >
-        </div>
-      </div>
-      <div class="announcement">
-        <h3 class="text-white-bold">Duyurular</h3>
-        <div class="announcements">
-          <div class="list-announcement">
-            <h3>Duyuru 1</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum corrupti optio voluptas expedita cum, nihil tenetur,
-              labore nam accusamus vitae non distinctio. Officia molestias ut
-              minima, earum aperiam cum excepturi?
-            </p>
-          </div>
-          <div class="list-announcement">
-            <h3>Duyuru 2</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum corrupti optio voluptas expedita cum, nihil tenetur,
-              labore nam accusamus vitae non distinctio. Officia molestias ut
-              minima, earum aperiam cum excepturi?
-            </p>
-          </div>
-          <div class="list-announcement">
-            <h3>Duyuru 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum corrupti optio voluptas expedita cum, nihil tenetur,
-              labore nam accusamus vitae non distinctio. Officia molestias ut
-              minima, earum aperiam cum excepturi?
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
-    <datalist id="cities" style="display: none">
-      <option value="Adana"></option>
-      <option value="Adıyaman"></option>
-      <option value="Afyonkarahisar"></option>
-      <option value="Ağrı"></option>
-      <option value="Amasya"></option>
-      <option value="Ankara"></option>
-      <option value="Antalya"></option>
-      <option value="Artvin"></option>
-      <option value="Aydın"></option>
-      <option value="Balıkesir"></option>
-      <option value="Bilecik"></option>
-      <option value="Bingöl"></option>
-      <option value="Bitlis"></option>
-      <option value="Bolu"></option>
-      <option value="Burdur"></option>
-      <option value="Bursa"></option>
-      <option value="Çanakkale"></option>
-      <option value="Çankırı"></option>
-      <option value="Çorum"></option>
-      <option value="Denizli"></option>
-      <option value="Diyarbakır"></option>
-      <option value="Edirne"></option>
-      <option value="Elazığ"></option>
-      <option value="Erzincan"></option>
-      <option value="Erzurum"></option>
-      <option value="Eskişehir"></option>
-      <option value="Gaziantep"></option>
-      <option value="Giresun"></option>
-      <option value="Gümüşhane"></option>
-      <option value="Hakkâri"></option>
-      <option value="Hatay"></option>
-      <option value="Isparta"></option>
-      <option value="İçel (Mersin)"></option>
-      <option value="İstanbul"></option>
-      <option value="İzmir"></option>
-      <option value="Kars"></option>
-      <option value="Kastamonu"></option>
-      <option value="Kayseri"></option>
-      <option value="Kırklareli"></option>
-      <option value="Kırşehir"></option>
-      <option value="Kocaeli"></option>
-      <option value="Konya"></option>
-      <option value="Kütahya"></option>
-      <option value="Malatya"></option>
-      <option value="Manisa"></option>
-      <option value="Kahramanmaraş"></option>
-      <option value="Mardin"></option>
-      <option value="Muğla"></option>
-      <option value="Muş"></option>
-      <option value="Nevşehir"></option>
-      <option value="Niğde"></option>
-      <option value="Ordu"></option>
-      <option value="Rize"></option>
-      <option value="Sakarya"></option>
-      <option value="Samsun"></option>
-      <option value="Siirt"></option>
-      <option value="Sinop"></option>
-      <option value="Sivas"></option>
-      <option value="Tekirdağ"></option>
-      <option value="Tokat"></option>
-      <option value="Trabzon"></option>
-      <option value="Tunceli"></option>
-      <option value="Şanlıurfa"></option>
-      <option value="Uşak"></option>
-      <option value="Van"></option>
-      <option value="Yozgat"></option>
-      <option value="Zonguldak"></option>
-      <option value="Aksaray"></option>
-      <option value="Bayburt"></option>
-      <option value="Karaman"></option>
-      <option value="Kırıkkale"></option>
-      <option value="Batman"></option>
-      <option value="Şırnak"></option>
-      <option value="Bartın"></option>
-      <option value="Ardahan"></option>
-      <option value="Iğdır"></option>
-      <option value="Yalova"></option>
-      <option value="Karabük"></option>
-      <option value="Kilis"></option>
-      <option value="Osmaniye"></option>
-      <option value="Düzce"></option>
-    </datalist>
+    <datalist id="citiess" style="display: none" aria-autocomplete="list"></datalist> 
   </body>
+  <script src="../src/script/main.js"></script>
 </html>

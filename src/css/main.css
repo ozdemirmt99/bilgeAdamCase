@@ -130,18 +130,23 @@ body {
     height: 60px;
     border-radius: 50px;
 }
+.announcement-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
 
 .announcement {
     background-color: #1c3e67;
     border-radius: 18px;
-    padding: 0px 0px 25px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 860px;
+    width: 651px;
     justify-content: center;
     position: absolute;
-    left: calc(50% - 430px);
+    padding: 60px;
+    row-gap: 15px;
 }
 .announcement h3 {
     width: 100%;
@@ -151,6 +156,7 @@ body {
 
 .announcements {
     display: flex;
+    gap: 15px;
     justify-content: space-evenly;
     flex-direction: row;
     width: inherit;
@@ -158,8 +164,6 @@ body {
 
 .list-announcement {
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
     border-radius: 0px 35px 0px 35px;
     height: 250px;
     width: 250px;
@@ -203,4 +207,52 @@ body {
     width: inherit;
     height: inherit;
     background-color: #0f2d51bf;
+}
+
+#cities {
+    display: none;
+    position: relative;
+    left: 20px;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .announcements{
+        flex-direction: column;
+        align-items: center ;
+    }
+
+    .tab-content-buttons{
+        width: 200px !important;
+    }
+    .tab-content-buttons img {
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+    }
+
+    .announcement{
+        width: 72vw;
+    }
+
+    #city-search {
+        width: 90vw;
+    }
+
+    .tab-content {
+
+        width: 99vw;
+    }
+
+    .user-info{
+        margin-left: 5px;
+    }
+
+    #catalog {
+        display: none;
+    }
+
+    #cities{
+        width: 80vw !important;
+    }
 }
